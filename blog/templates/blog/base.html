@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for adjusting text size */
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            font-size: 15px; /* Adjust the font size as needed */
+        }
+    </style>
+
+
+    <title>Home</title>
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+    {% include "blog/navbar.html" %} 
+    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+{% block msg %}
+{%endblock msg %}
+</div>
+</div>
+
+<div class ="row">
+
+    {% block side %}
+    {% endblock side%}
+{% block content  %}
+{% endblock content  %}
+</div>
+</div>
+
+
+
+
+
+
+
+    <script src="{% static 'blog/js/jquery.js' %}"></script>
+    <script src="{% static 'blog/js/popper.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+
+
+    
+</body>
+</html>
